@@ -27,6 +27,9 @@ void Sample_DoIt()
             
             printf("=== GoodThreadSample ===\n");
             GoodThreadSample();
+            
+            printf("=== SemaphoreSample ===\n");
+            SemaphoreSample();
             break;
     }
 }
