@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    Sample_DoIt();
+//    Sample_DoIt(ObjectOriented);
+//    Sample_DoIt(Thread);
+    Sample_DoIt(Math);
 
     return 0;
 }

@@ -16,12 +16,12 @@ void Staff_Init(Staff* self,
     self->SaySelfIntroduction = Staff_SaySelfIntroduction; // メンバーポインタ関数に実装をセット
 }
 
-static const char* Staff_GetName(const Staff* self)
+const char* Staff_GetName(const Staff* self)
 {
     return self->age_ > 18 ? self->name_ : Secret;
 }
 
-static int Staff_GetAge(const Staff* self)
+int Staff_GetAge(const Staff* self)
 {
     return self->age_;
 }

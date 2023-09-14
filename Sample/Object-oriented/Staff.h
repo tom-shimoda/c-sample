@@ -19,10 +19,11 @@ void Staff_Init(Staff* self,
                 int age,
                 void (* onEndSelfIntroduction)());
 
-static const char* Staff_GetName(const Staff* self); // privateメソッドはstaticをつけて隠蔽
+// privateメソッドはstaticをつけて隠蔽
+static const char* Staff_GetName(const Staff* self);
 
 static int Staff_GetAge(const Staff* self);
 
-void Staff_SaySelfIntroduction(const Staff* self); // publicメソッド
+static void Staff_SaySelfIntroduction(const Staff* self);
 
 #endif //C_SAMPLE_STAFF_H

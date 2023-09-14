@@ -11,4 +11,12 @@ add_executable(c_sample main.c
         Sample/Sample.c
         Sample/Sample.h
         Sample/Thread/Thread.c
-        Sample/Thread/Thread.h)
+        Sample/Thread/Thread.h
+        Sample/Math/Rotate2D.c
+        Sample/Math/Rotate2D.h
+        Sample/Math/Complex.h
+        Sample/Math/Vector2.h
+        Sample/Math/Complex.c
+        Sample/Math/Vector2.c
+        Sample/Math/MathUtil.h
+)

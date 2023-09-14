@@ -2,21 +2,14 @@
 #include "Sample.h"
 #include "Object-oriented/Object-oriented.h"
 #include "Thread/Thread.h"
+#include "Math/Rotate2D.h"
 
-typedef enum
+void Sample_DoIt(SampleType type)
 {
-    ObjectOriented,
-    Thread,
-} SampleType;
-
-void Sample_DoIt()
-{
-    SampleType sampleType = Thread;
-
-    switch (sampleType)
+    switch (type)
     {
         case ObjectOriented:
-            // オブジェクト指向
+           // オブジェクト指向
             printf("=== ObjectOrientedSample ===\n");
             ObjectOrientedSample();
             break;
@@ -30,6 +23,11 @@ void Sample_DoIt()
             
             printf("=== SemaphoreSample ===\n");
             SemaphoreSample();
+            break;
+        case Math:
+            // 数学
+            printf("=== Math ===\n");
+            Rotate2DSample(); // 複素数平面回転
             break;
     }
 }
