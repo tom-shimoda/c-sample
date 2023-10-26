@@ -30,4 +30,8 @@ add_executable(c_sample main.c
         Sample/Coroutine/CoroutineSample.c
         Sample/Coroutine/CoroutineSample.h
         Sample/Coroutine/Coroutine.h
+        Sample/List/List.c
+        Sample/List/List.h
+        Sample/List/ListSample.c
+        Sample/List/ListSample.h
 )

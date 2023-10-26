@@ -10,6 +10,7 @@
 #include "Math/Rotate2D.h"
 #include "Interface/InterfaceSample.h"
 #include "Coroutine/CoroutineSample.h"
+#include "List/ListSample.h"
 
 void Sample_DoIt(SampleType type)
 {
@@ -39,9 +40,12 @@ void Sample_DoIt(SampleType type)
             Rotate2DSample(); // 複素数平面回転
             break;
         case Interface:
-            // Interface
             printf("=== Interface ===\n");
             InterfaceSample();
+            break;
+        case List:
+            printf("=== List ===\n");
+            ListSample();
             break;
         default:
             break;

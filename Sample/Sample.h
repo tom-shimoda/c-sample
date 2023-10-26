@@ -8,6 +8,7 @@ typedef enum
     Math,
     Interface,
     Coroutine,
+    List,
 } SampleType;
 
 void Sample_DoIt(SampleType type);
