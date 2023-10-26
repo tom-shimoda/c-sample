@@ -1,5 +1,10 @@
-#include <strings.h>
+#ifdef WINDOWS
+#include <stdio.h>
+#elif MAC
 #include <printf.h>
+#endif
+
+#include <strings.h>
 #include "Staff.h"
 
 static char* Secret = "*****"; // クラスstatic変数

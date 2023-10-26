@@ -1,4 +1,9 @@
+#ifdef WINDOWS
+#include <stdio.h>
+#elif MAC
 #include <printf.h>
+#endif
+
 #include "Rotate2D.h"
 
 #include "Vector2.h"

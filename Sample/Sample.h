@@ -6,6 +6,8 @@ typedef enum
     ObjectOriented,
     Thread,
     Math,
+    Interface,
+    Coroutine,
 } SampleType;
 
 void Sample_DoIt(SampleType type);

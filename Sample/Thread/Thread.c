@@ -1,3 +1,4 @@
+/*
 #include <printf.h>
 #include <pthread.h>
 #include <sys/semaphore.h>
@@ -120,4 +121,4 @@ void SemaphoreSample()
     sem_close(semaphore);
     sem_unlink(sem_name);
 }
-
+*/
