@@ -8,12 +8,11 @@ int main(void)
 //    Sample_DoIt(Thread);
 //    Sample_DoIt(Math);
 //    Sample_DoIt(Interface);
-//    Sample_DoIt(Coroutine);
-    Sample_DoIt(List);
+//    Sample_DoIt(List);
 
     // 無限ループの例
     int frameCounter = 0;
-    int roopCount = 0;
+    int roopCount = 10;
     for (int i = 0; i < roopCount; ++i)
     {
         printf("=== frame : %d ===\n", frameCounter++);
