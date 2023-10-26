@@ -12,4 +12,6 @@ typedef enum
 
 void Sample_DoIt(SampleType type);
 
+void Sample_DoEveryFrame(SampleType type);
+
 #endif //C_SAMPLE_SAMPLE_H

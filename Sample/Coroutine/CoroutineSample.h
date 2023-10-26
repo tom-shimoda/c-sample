@@ -1,8 +1,6 @@
-//
-// Created by shimoda on 2023/10/26.
-//
-
 #ifndef C_SAMPLE_COROUTINESAMPLE_H
 #define C_SAMPLE_COROUTINESAMPLE_H
+
+void CoroutineSample();
 
 #endif //C_SAMPLE_COROUTINESAMPLE_H

@@ -9,6 +9,7 @@
 #include "Thread/Thread.h"
 #include "Math/Rotate2D.h"
 #include "Interface/InterfaceSample.h"
+#include "Coroutine/CoroutineSample.h"
 
 void Sample_DoIt(SampleType type)
 {
@@ -42,9 +43,20 @@ void Sample_DoIt(SampleType type)
             printf("=== Interface ===\n");
             InterfaceSample();
             break;
+        default:
+            break;
+    }
+}
+
+void Sample_DoEveryFrame(SampleType type)
+{
+    switch (type)
+    {
         case Coroutine:
             // Coroutine
-            printf("=== Coroutine ===\n");
+            CoroutineSample();
+            break;
+        default:
             break;
     }
 }
