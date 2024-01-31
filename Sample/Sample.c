@@ -16,12 +16,12 @@ void Sample_DoIt(SampleType type)
 {
     switch (type)
     {
-        case ObjectOriented:
+        case SampleType_ObjectOriented:
             // オブジェクト指向
             printf("=== ObjectOrientedSample ===\n");
             ObjectOrientedSample();
             break;
-        case Thread:
+        case SampleType_Thread:
             /*
             // スレッド
             printf("=== BadThreadSample ===\n");
@@ -34,17 +34,17 @@ void Sample_DoIt(SampleType type)
             SemaphoreSample();
              */
             break;
-        case Math:
+        case SampleType_Math:
             // 数学
-            printf("=== Math ===\n");
+            printf("=== SampleType_Math ===\n");
             Rotate2DSample(); // 複素数平面回転
             break;
-        case Interface:
-            printf("=== Interface ===\n");
+        case SampleType_Interface:
+            printf("=== SampleType_Interface ===\n");
             InterfaceSample();
             break;
-        case List:
-            printf("=== List ===\n");
+        case SampleType_List:
+            printf("=== SampleType_List ===\n");
             ListSample();
             break;
         default:
@@ -52,13 +52,36 @@ void Sample_DoIt(SampleType type)
     }
 }
 
-void Sample_DoEveryFrame(SampleType type)
+void Sample_Init(SampleType type)
 {
     switch (type)
     {
-        case Coroutine:
-            // Coroutine
-            CoroutineSample();
+        case SampleType_Coroutine:
+            CoroutineSample_Init();
+            break;
+        default:
+            break;
+    }
+}
+
+void Sample_Update(SampleType type)
+{
+    switch (type)
+    {
+        case SampleType_Coroutine:
+            CoroutineSample_Update();
+            break;
+        default:
+            break;
+    }
+}
+
+void Sample_Exit(SampleType type)
+{
+    switch (type)
+    {
+        case SampleType_Coroutine:
+            CoroutineSample_Exit();
             break;
         default:
             break;
