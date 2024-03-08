@@ -7,6 +7,7 @@ typedef struct Coroutine_
 {
     bool isUse;
     int state; // 現在の進行状態 (-1なら停止中)
+    int waitCounter; // フレーム待機用カウンタ
     void (* func)(struct Coroutine_* coroutine);
     void (* onEnd)(); // 終了時コールバック
 } Coroutine;
@@ -30,7 +31,6 @@ void Coroutine_Update();
 int GetRunningCoroutineCount();
 
 #define co_begin \
-static int __waitCounter = 0; \
 switch(coroutine->state){ \
     case -1: \
         break; \
@@ -47,12 +47,12 @@ do { \
 #define co_waitForFrame(n) \
 do { \
     coroutine->state = __LINE__; \
-    __waitCounter = n; \
+    coroutine->waitCounter = n; \
     return; \
     case __LINE__: \
-        __waitCounter--; \
-        if(__waitCounter <= 0){    \
-            __waitCounter = 0; \
+        coroutine->waitCounter--; \
+        if(coroutine->waitCounter <= 0){    \
+            coroutine->waitCounter = 0; \
             break; \
         } else{ \
             return; \
