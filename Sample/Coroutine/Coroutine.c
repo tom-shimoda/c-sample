@@ -23,6 +23,7 @@ void Coroutine_Init()
     {
         coroutinePool[i].isUse = false;
         coroutinePool[i].state = -1;
+        coroutinePool[i].waitCounter = 0;
         coroutinePool[i].func = NULL;
         coroutinePool[i].onEnd = NULL;
     }
@@ -41,6 +42,7 @@ Coroutine* StartCoroutine(void (* func)(Coroutine*), void (* onEnd)())
 
     coroutine->isUse = true;
     coroutine->state = 0;
+    coroutine->waitCounter = 0;
     coroutine->func = func;
     coroutine->onEnd = onEnd;
 
@@ -56,6 +58,7 @@ void StopCoroutine(Coroutine* coroutine)
 
     coroutine->isUse = false;
     coroutine->state = -1;
+    coroutine->waitCounter = 0;
     coroutine->func = NULL;
     coroutine->onEnd = NULL;
 }
